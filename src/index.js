@@ -1,13 +1,14 @@
-import React from 'react';
-import { render }from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
 
-import './index.css';
+import Root from "./components/App";
+import configureStore from "./configureStore";
+// import registerServiceWorker from "./registerServiceWorker";
 
-import Root from './components/Root';
-import registerServiceWorker from './registerServiceWorker';
-import configureStore from './configureStore';
+import "./index.css";
 
 const store = configureStore();
 
-render(<Root store={store} />, document.getElementById('root'));
-registerServiceWorker();
+render(<Root store={store} />, document.getElementById("root"));
+
+// registerServiceWorker();
