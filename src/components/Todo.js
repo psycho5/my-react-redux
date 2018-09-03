@@ -6,3 +6,8 @@ const Todo = ({ todo, onTodoClick }) => (
 );
 
 export default Todo;
+
+Todo.propTypes = {
+  todo: PropTypes.object.isRequired,
+  onTodoClick: PropTypes.func.isRequired
+};

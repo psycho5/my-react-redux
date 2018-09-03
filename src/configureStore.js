@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import throttle from "lodash/throttle";
+// import throttle from "lodash/throttle";
 
 import todoApp from "./reducers";
 // import { loadState, saveState } from "./localStorage";
