@@ -2,7 +2,12 @@ import React from "react";
 import { PropTypes } from "prop-types";
 
 const Todo = ({ todo, onTodoClick }) => (
-  <li key={todo.id} onClick={() => onTodoClick(todo.id)}>
+  <li
+    onClick={onTodoClick}
+    style={{
+      textDecoration: todo.completed ? "line-through" : "none"
+    }}
+  >
     {todo.text}
   </li>
 );
@@ -10,6 +15,6 @@ const Todo = ({ todo, onTodoClick }) => (
 export default Todo;
 
 Todo.propTypes = {
-  todo: PropTypes.object,
-  onTodoClick: PropTypes.func
+  todo: PropTypes.object.isRequired,
+  onTodoClick: PropTypes.func.isRequired
 };
